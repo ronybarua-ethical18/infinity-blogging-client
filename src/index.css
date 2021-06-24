@@ -4,9 +4,14 @@
 
 @layer base{
     body{
-        @apply font-Montserrat box-border text-center;
-    },
+        @apply font-Montserrat box-border;
+    }
+}
+@layer components{
     label{
-        @apply px-4 py-3 bg-red-400 text-white rounded-3xl
+        @apply px-4 py-2 bg-red-400 text-white rounded-3xl;
+    }
+    h1, h2{
+        @apply text-[#385A64];
     }
 }

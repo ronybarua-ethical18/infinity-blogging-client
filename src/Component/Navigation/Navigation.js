@@ -10,7 +10,7 @@ import {
 } from "@heroicons/react/outline"
 const Navigation = () => {
     return (
-        <div className="shadow-md flex px-4 justify-between items-center flex-col sm:flex-row">
+        <div className="shadow-md sticky top-0 bg-white w-100 flex px-4 mb-5 justify-between items-center flex-col sm:flex-row">
             <div className="nav-links flex flex-grow max-w-2xl">
                 <NavItem title="Home" Icon={HomeIcon}/>
                 <NavItem title="Service" Icon={SupportIcon}/>
