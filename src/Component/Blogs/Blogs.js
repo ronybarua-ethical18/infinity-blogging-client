@@ -1,9 +1,25 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect } from 'react';
 import { useState } from 'react';
-import fakeData from '../../fakeData';
 import SingleBlog from './SingleBlog';
 const Blogs = () => {
-    const [blogs, setBlogs] = useState(fakeData)
+    const [blogs, setBlogs] = useState([])
+
+    // const fetchData = async () =>{
+    //     try {
+    //         const blogsData = await axios.get('http://localhost:8000/blogs')
+    //         setBlogs(blogsData)
+    //         console.log(blogsData)
+    //     } catch (error) {
+    //         console.log(error)            
+    //     }
+
+    // }
+    useEffect(() =>{
+        fetch('http://localhost:8000/blogs')
+        .then(res => res.json())
+        .then(data => setBlogs(data))
+    })
     return (
         <div className="container mx-auto p-5 my-5">
             <div className="px-5 grid md:grid-cols-2 sm:grid-cols-1 items-center gap-4">

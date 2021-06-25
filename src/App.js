@@ -5,6 +5,7 @@ import AboutUs from '../src/Component/AboutUs/AboutUs'
 import Blogs from '../src/Component/Blogs/Blogs'
 import ContactUs from './Component/ContactUs/ContactUs';
 import Footer from './Component/Footer/Footer';
+import AdminDashboard from './Component/AdminDashboard/AdminDashboard';
 function App() {
   return (
     <div className="App">
@@ -12,8 +13,9 @@ function App() {
       <HomeContent />
       <AboutUs />
       <Blogs />
-      <ContactUs/>
+      <ContactUs />
       <Footer />
+        {/* <AdminDashboard /> */}
     </div>
   );
 }

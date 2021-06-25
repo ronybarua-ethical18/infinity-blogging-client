@@ -7,12 +7,12 @@ const SingleBlog = ({ blog }) => {
     return (
         <div className="max-w-sm p-3 text-left rounded-3xl overflow-hidden shadow-2xl border-double border-4 border-light-green-500">
             <div>
-                <img src={blog.img} alt="" className="w-full" />
+                <img src={blog.imageURL} alt="" className="w-full" />
                 <h2 className="my-3 text-3xl font-bold">{blog.title}</h2>
             </div>
             <div className="author mb-3">
                 <span className="flex items-center"><UsersIcon className="h-8 w-5 mr-3" />{blog.author}</span>
-                <span className="flex items-center"><CubeIcon className="h-8 w-5 mr-3" />{blog.Date}</span>
+                <span className="flex items-center"><CubeIcon className="h-8 w-5 mr-3" />{blog.date}</span>
             </div>
             <div className="">
                 <p className="mb-3">{blog.summary}</p>
