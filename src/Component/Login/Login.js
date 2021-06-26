@@ -120,6 +120,7 @@ const Login = () => {
                                 type="password"
                                 onBlur={handleBlur}
                                 placeholder="password" />
+                                lorem200
                         </div>
                         <p className="text-danger">{passwordError}</p>
                         <div className="checkbox mb-2">

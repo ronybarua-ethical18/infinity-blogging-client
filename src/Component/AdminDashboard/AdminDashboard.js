@@ -25,7 +25,7 @@ const AdminDashboard = () => {
         }
         console.log(blogData)
         if (blogData.imageURL !== null) {
-            const url = 'http://localhost:8000/addBlogs';
+            const url = 'https://nameless-dusk-43163.herokuapp.com/addBlogs';
             fetch(url, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
