@@ -7,7 +7,8 @@ const Blogs = () => {
 
     // const fetchData = async () =>{
     //     try {
-    //         const blogsData = await axios.get('http://localhost:8000/blogs')
+    //         const blogsData = await axios.get('https://nameless-dusk-43163.herokuapp.com/blogs')
+    //         .then(res => res)
     //         setBlogs(blogsData)
     //         console.log(blogsData)
     //     } catch (error) {
@@ -16,7 +17,7 @@ const Blogs = () => {
 
     // }
     useEffect(() =>{
-        fetch('http://localhost:8000/blogs')
+        fetch('https://nameless-dusk-43163.herokuapp.com/blogs')
         .then(res => res.json())
         .then(data => setBlogs(data))
     })

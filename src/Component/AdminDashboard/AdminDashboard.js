@@ -2,6 +2,12 @@ import React from 'react';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
+import {
+    Link
+} from "react-router-dom";
+import {
+    UserCircleIcon
+} from "@heroicons/react/outline"
 const AdminDashboard = () => {
 
     const [disableState, setDisableState] = useState(true)
@@ -53,14 +59,16 @@ const AdminDashboard = () => {
             });
     }
     return (
-        <div class="flex">
-            <div class="w-1/4 bg-red-500 h-screen p-4">
-                <h3 className="text-3xl font-bold text-white text-center">INFINITY</h3>
-                <div className="navigate-page">
-                    
+        <div class="">
+            <div class=" bg-red-500 p-5 flex justify-between items-center flex-col sm:flex-row">
+                <h3 className="text-3xl font-bold text-white text-left">INFINITY</h3>
+                <div className="nav-links ">
+                    <Link to="/home" className="mr-3"><strong className="text-white">Home</strong></Link>
+                    <Link to="/admin" className="mr-3" Icon={UserCircleIcon}><strong className="text-white">Add Blog</strong></Link>
+                    <Link to="/manageBlogs"><strong className="text-white">Manage Blogs</strong></Link>
                 </div>
             </div>
-            <div class="w-3/4 bg-white p-4">
+            <div class="bg-white p-5">
                 <h2 className="text-3xl font-bold">Add Blog</h2>
                 <hr />
                 <div className="form-details text-left">
@@ -95,12 +103,6 @@ const AdminDashboard = () => {
                             </div>
                         </div>
                         <div class="flex flex-wrap -mx-3 mb-6">
-                            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-                                <span class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
-                                    Publish Date
-                                </span>
-                                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="" name="date" {...register("date")} type="date" placeholder="Date" />
-                            </div>
                             <div class="w-full md:w-1/2 px-3">
                                 <span class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                                     Cover Image

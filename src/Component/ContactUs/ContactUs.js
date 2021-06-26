@@ -12,7 +12,7 @@ const ContactUs = () => {
                         <div className="w-full max-w-lg mb-6">
                             <form className="w-full max-w-sm">
                                 <input class="bg-gray-200 text-gray-700 rounded-full py-3 px-4 leading-tight focus:outline-none focus:bg-light" id="grid-first-name" type="text" placeholder="Send Email"></input>
-                                <button class="bg-red-400 hover:bg-red-500 text-white font-bold py-2 px-4 rounded-full focus:outline-none ">
+                                <button className="bg-red-400 hover:bg-red-500 text-white font-bold py-2 px-4 rounded-full focus:outline-none ">
                                     Email
                                 </button>
                             </form>
