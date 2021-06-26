@@ -84,14 +84,14 @@ const Login = () => {
         event.preventDefault();
     }
     return (
-        <div>
+        <div className="">
             <Navigation />
             <div className="flex justify-center h-screen items-center">
                 <div class="w-full max-w-sm">
-                    <h4 className="display-5 price-title text-center"><b>User Authentication</b></h4>
+                    <div className="text-center"><label htmlFor="" >User Authentication</label></div>
                     {/* <p className="text-red-500">{user.error}</p> */}
                     {user.success && <p className="text-green-500">User {newUser ? 'Created' : 'Logged In'} Successfully</p>}
-                    <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" onSubmit={handleSubmit}>
+                    <form class="bg-white shadow-lg rounded px-8 pt-6 pb-8 mb-4" onSubmit={handleSubmit}>
                         {newUser && <div class="mb-4">
                             <span> Name</span>
                             <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -124,14 +124,14 @@ const Login = () => {
                         <p className="text-danger">{passwordError}</p>
                         <div className="checkbox mb-2">
                             <input type="checkbox" onChange={() => setNewUser(!newUser)} name="newUser" id="" />
-                            <span>Sign up if you are new here</span>
+                            <span> Sign up if you are new here</span>
                         </div>
                         <div class="flex items-center justify-between">
                             <button
-                                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                                class="bg-red-400 hover:bg-red-500 text-white font-bold py-2 px-4 rounded-full focus:outline-none "
                                 type="button">{newUser ? 'Sign Up' : 'Sign In'}
                             </button>
-                            <button onClick={googleSignIn} className="submit-button  mb-2">Sign in with google</button>
+                            <button onClick={googleSignIn} className="bg-red-400 hover:bg-red-500 text-white font-bold py-2 px-4 rounded-full focus:outline-none  mb-2">Sign in with google</button>
                         </div>
                     </form>
                 </div>
